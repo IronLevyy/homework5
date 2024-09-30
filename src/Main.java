@@ -4,39 +4,50 @@ public class Main {
         byte clientOS = 1;
         if (clientOS < 1) {
             System.out.println("Установите версию приложения для IOS по ссылке.");
-        } else {System.out.println("Установите версию приложения для Android по ссылке.");}
+        } else {
+            System.out.println("Установите версию приложения для Android по ссылке.");
+        }
 
 //Задача 2
         int clientDeviceYear = 2015;
         System.out.print("Установите ");
-        if (clientDeviceYear < 2015){
+        if (clientDeviceYear < 2015) {
             System.out.print("облегчённую ");
         }
         if (clientOS < 1) {
             System.out.print("версию приложения для IOS по ссылке.\n");
-        } else {System.out.print("версию приложения для Android по ссылке.\n");}
+        } else {
+            System.out.print("версию приложения для Android по ссылке.\n");
+        }
 
 //Задача 3
         int year = 2021;
-        if ((year % 400) == 0){
+        if ((year % 400) == 0) {
             System.out.printf("%d год является високосным.\n", year);
-        } else if (((year % 4) == 0) && ((year % 100) != 0)){
+        } else if (((year % 4) == 0) && ((year % 100) != 0)) {
             System.out.printf("%d год является високосным.\n", year);
-        } else {System.out.printf("%d год не является високосным.\n", year);}
+        } else {
+            System.out.printf("%d год не является високосным.\n", year);
+        }
 
 //Задача 4
-        int deliverDistanse = 95;
-        if (deliverDistanse <= 20){
+        int deliveryDistanse = 95;
+        if (deliveryDistanse <= 20) {
             System.out.println("Потребуется 1 день.");
-        } else if (deliverDistanse <=60){
+        } else if (deliveryDistanse <= 60) {
             System.out.println("Потребуется 2 дня.");
-        } else if (deliverDistanse <= 100){
+        } else if (deliveryDistanse <= 100) {
             System.out.println("Потребуется 3 дня.");
-        } else {System.out.println("Доставки нет.");}
+        } else {
+            System.out.println("Доставки нет.");
+        }
 
 //Задача 5
         int monthNumber = 12;
-        switch (monthNumber){
+        if (monthNumber < 1 || monthNumber > 12){
+            System.exit(0);
+        }
+        switch (monthNumber) {
             case 12:
             case 1:
             case 2:
@@ -57,8 +68,6 @@ public class Main {
             case 11:
                 System.out.println("Осень.");
                 break;
-            default:
-                System.out.println("Некорректный месяц.");
         }
     }
 }
